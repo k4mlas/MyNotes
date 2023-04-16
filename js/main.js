@@ -12,7 +12,11 @@ const error = document.querySelector('.panel__error');
 
 const showPanel = () => {
 	notePanel.style.display = 'flex';
-    console.log("asda");
+};
+
+const closePanel = () => {
+	notePanel.style.display = 'none';
 };
 
 addBtn.addEventListener('click', showPanel);
+cancelBtn.addEventListener('click', closePanel);
