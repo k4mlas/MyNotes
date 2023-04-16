@@ -7,5 +7,53 @@
 }
 
 body {
+	height: 100vh;
 	font-family: 'Montserrat', sans-serif;
+	background-color: #f1dfd1;
+	background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px;
+	height: 120px;
+}
+
+.btn {
+	padding: 12px 25px;
+	background: none;
+	border: 1px solid #999;
+	border-radius: 5px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+	&:hover {
+		background-color: #333;
+		color: #ddd;
+	}
+}
+.icon {
+	margin-right: 10px;
+}
+
+.notes {
+	display: flex;
+	align-items: start;
+	flex-wrap: wrap;
+	padding: 20px;
+	&__note {
+		margin: 40px 20px;
+		width: 240px;
+		background-color: rgb(255, 243, 0);
+		border: 1px solid black;
+		&__header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px;
+			background-color: rgba(0, 0, 0, 0.06);
+		}
+	}
 }
