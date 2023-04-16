@@ -29,22 +29,46 @@
 
     </div>
     <div class="notes">
+        <div class="notes__note">
+            <div class="netes__note__header">
 
-        <div class="nete__header">
-
-            <h3 class="note__header__title">Notatka #1</h3>
-            <button class="note__header__delete"><i class="fas fa-times icon"></i></button>
+                <h3 class="notes__note__header__title">Notatka #1</h3>
+                <button class="notes__note__header__delete"><i class="fas fa-times icon"></i></button>
+            </div>
+            <div class="notes__note__body">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe tempore quia iste voluptatibus, minima
+                ex
+                omnis sed nobis tenetur quas exercitationem nam fugit corrupti dolor impedit est fuga odit recusandae
+                nemo
+                fugiat. Iste culpa corrupti quas? Nobis, velit voluptatem odit blanditiis vitae dolorum doloremque a
+                iste
+                dolor aperiam fugit libero incidunt optio architecto deleniti. Voluptas corrupti quam quis mollitia
+            </div>
         </div>
-        <div class="notes__body">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe tempore quia iste voluptatibus, minima ex
-            omnis sed nobis tenetur quas exercitationem nam fugit corrupti dolor impedit est fuga odit recusandae nemo
-            fugiat. Iste culpa corrupti quas? Nobis, velit voluptatem odit blanditiis vitae dolorum doloremque a iste
-            dolor aperiam fugit libero incidunt optio architecto deleniti. Voluptas corrupti quam quis mollitia
-        </div>
-
     </div>
 
-    
+    <div class="panel">
+
+        <h2>dodaj notetkę</h2>
+        <label for="category">wybierz kategorię</label>
+        <select id="category">
+            <option value="0" disabled selected>- wybierz kategorię -</option>
+            <option value="1">zakupy</option>
+            <option value="1">praca</option>
+            <option value="1">samochód</option>
+            <option value="1">inne</option>
+        </select>
+        <label for="text">wpisz treść notatki</label>
+        <textarea id="text"></textarea>
+        <p class="panel__error">Uzupełnij wszystkie pola!</p>
+        <div class="panel__buttons">
+
+            <buttons class="panel__buttons__save icon"><i class="fas fa-save"></i>zapisz</buttons>
+            <buttons class="panel__buttons__cancel icon"><i class="far fa-window-close"></i> anuluj</buttons>
+        </div>
+    </div>
+
+
 
 
     <script src="./js/main.js"></script>
