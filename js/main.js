@@ -42,7 +42,7 @@ const createNote = () => {
 	newNote.setAttribute('id', cardId);
 	newNote.innerHTML = `<div class="notes__note__header">
 
-<h3 class="notes__note__header__title">Notatka #1</h3>
+<h3 class="notes__note__header__title">${selectedValue}</h3>
 <button class="notes__note__header__delete"><i class="fas fa-times"></i></button>
 </div>
 <div class="notes__note__body">
@@ -51,6 +51,10 @@ ${textArea.value}
 </div>`;
 	noteArea.appendChild(newNote);
 	cardId++;
+};
+
+const selecteValue = () => {
+	selectedValue = category.options[category.selectedIndex].text;
 };
 
 addBtn.addEventListener('click', showPanel);
