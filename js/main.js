@@ -51,10 +51,28 @@ ${textArea.value}
 </div>`;
 	noteArea.appendChild(newNote);
 	cardId++;
+	chengeColor(newNote);
 };
 
 const selecteValue = () => {
 	selectedValue = category.options[category.selectedIndex].text;
+};
+
+const chengeColor = (note) => {
+	switch (selectedValue) {
+		case 'zakupy':
+			note.style.backgroundColor = 'rgb(72,255,0';
+			break;
+		case 'praca':
+			note.style.backgroundColor = 'rgb(255,243,0';
+			break;
+		case 'samochód':
+			note.style.backgroundColor = 'rgb(255,43,30';
+			break;
+		case 'inne':
+			note.style.backgroundColor = 'rgb(23,123,123';
+			break;
+	}
 };
 
 addBtn.addEventListener('click', showPanel);
