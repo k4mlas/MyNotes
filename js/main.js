@@ -1,5 +1,5 @@
 const addBtn = document.querySelector('.menu__bottons__add');
-const deleteAllBtn = document.getElementsByClassName('menu__bottons__delete');
+const deleteAllBtn = document.querySelector('.menu__bottons__delete');
 const saveBtn = document.querySelector('.panel__buttons__save');
 const cancelBtn = document.querySelector('.panel__buttons__cancel');
 const deleteBtn = document.querySelector('.notes__note__header__delete');
@@ -43,7 +43,7 @@ const createNote = () => {
 	newNote.innerHTML = `<div class="notes__note__header">
 
 <h3 class="notes__note__header__title">${selectedValue}</h3>
-<button class="notes__note__header__delete"><i class="fas fa-times"></i></button>
+<button class="notes__note__header__delete" onclick="deleteNote(${cardId})"><i class="fas fa-times"></i></button>
 </div>
 <div class="notes__note__body">
 ${textArea.value}
@@ -75,6 +75,17 @@ const chengeColor = (note) => {
 	}
 };
 
+const deleteNote = (id) => {
+	const noteToDelete = document.getElementById(id);
+	noteArea.removeChild(noteToDelete);
+};
+
+const deleteAllNotes = () => {
+	noteArea.textContent = '';
+	console.log('ecec');
+};
+
 addBtn.addEventListener('click', showPanel);
 cancelBtn.addEventListener('click', closePanel);
 saveBtn.addEventListener('click', addNote);
+deleteAllBtn.addEventListener('click', deleteAllNotes);
