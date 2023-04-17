@@ -20,15 +20,37 @@ const closePanel = () => {
 	notePanel.style.display = 'none';
 	error.style.visibility = 'hidden';
 	textArea.value = '';
-	category.value = 0;
+	category.selectedIndex = '0';
 };
 
 const addNote = () => {
-	if (textArea.value !== '') {
-		console.log('jest ok');
+	if (
+		textArea.value !== '' &&
+		category.options[category.selectedIndex].value != '0'
+	) {
+		error.style.visibility = 'hidden';
+		createNote();
+		closePanel();
 	} else {
-		console.log('nie jest ok');
+		error.style.visibility = 'visible';
 	}
+};
+
+const createNote = () => {
+	const newNote = document.createElement('div');
+	newNote.classList.add('notes__note');
+	newNote.setAttribute('id', cardId);
+	newNote.innerHTML = `<div class="notes__note__header">
+
+<h3 class="notes__note__header__title">Notatka #1</h3>
+<button class="notes__note__header__delete"><i class="fas fa-times"></i></button>
+</div>
+<div class="notes__note__body">
+${textArea.value}
+</div>
+</div>`;
+	noteArea.appendChild(newNote);
+	cardId++;
 };
 
 addBtn.addEventListener('click', showPanel);
