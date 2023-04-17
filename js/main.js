@@ -9,6 +9,8 @@ const notePanel = document.querySelector('.panel');
 const textArea = document.querySelector('#text');
 const category = document.querySelector('#category');
 const error = document.querySelector('.panel__error');
+let selectedValue;
+let cardId = 0;
 
 const showPanel = () => {
 	notePanel.style.display = 'flex';
@@ -16,7 +18,19 @@ const showPanel = () => {
 
 const closePanel = () => {
 	notePanel.style.display = 'none';
+	error.style.visibility = 'hidden';
+	textArea.value = '';
+	category.value = 0;
+};
+
+const addNote = () => {
+	if (textArea.value !== '') {
+		console.log('jest ok');
+	} else {
+		console.log('nie jest ok');
+	}
 };
 
 addBtn.addEventListener('click', showPanel);
 cancelBtn.addEventListener('click', closePanel);
+saveBtn.addEventListener('click', addNote);
