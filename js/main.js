@@ -45,8 +45,8 @@ const createNote = () => {
 <h3 class="notes__note__header__title">${selectedValue}</h3>
 <button class="notes__note__header__delete" onclick="deleteNote(${cardId})"><i class="fas fa-times"></i></button>
 </div>
-<div class="notes__note__body">
-${textArea.value}
+<div class="notes__note__body"><p>
+${textArea.value}</p>
 </div>
 </div>`;
 	noteArea.appendChild(newNote);
