@@ -71,6 +71,7 @@ body {
 .notes__note__body {
   padding: 20px 15px;
   font-size: 14px;
+  overflow-wrap: break-word;
 }
 
 .panel {
