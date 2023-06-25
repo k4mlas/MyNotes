@@ -2,7 +2,7 @@
 
 I invite you to check my project by clicking on the link below
 
-###[Go to the page! 🙂](https://k4mlas.github.io/MyNotes/)
+### [Go to the page! 🙂](https://k4mlas.github.io/MyNotes/)
 
 <br>
 
